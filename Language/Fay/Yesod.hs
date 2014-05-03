@@ -14,12 +14,7 @@ import           Fay.FFI
 import           Data.Data
 
 #ifdef FAY
-
-data Text = Text
-    deriving (Show, Read, Eq, Typeable, Data)
-
-fromString :: String -> Text
-fromString = ffi "%1"
+import Fay.Text
 
 toString :: Text -> String
 toString = ffi "%1"
